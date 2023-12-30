@@ -80,7 +80,7 @@ int my_string_compare(MY_STRING hLeft_string, MY_STRING hRight_string)
 
 	else {
 		// Normal check
-		for (i = 0; i < leftString->data[i] != '\0' && rightString->data[i] != '\0'; i++) {
+		for (i = 0; i < (leftString->data[i] != '\0') && (rightString->data[i] != '\0'); i++) {
 			if (leftString->data[i] > rightString->data[i]) {
 				result = 1;
 				break;
