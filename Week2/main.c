@@ -21,7 +21,7 @@ int main(int argc, char* argv[]) {
 	
 	printf("Comparing %s and %s: %d\n", "Apple", "Apple", my_string_compare(string1, string2));
 	printf("Size of String is: %d \n Capacity of String is: %d\n", my_string_get_size(hMy_string), my_string_get_capacity(hMy_string));
-	printf("%d \n", strcmp("Geek", "Geeks"));
+	printf("%d", strcmp("Geek", "Geeks"));
 	
 	
 	
