@@ -4,11 +4,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct string {
+struct string {
 	int capacity;
 	int size;
 	char* data;
-}String;
+};
+typedef struct string String;
 
 typedef void* MY_STRING;
 // Precondition: None 
