@@ -1,4 +1,4 @@
-#ifndef MY_STRING_H
+#ifdef MY_STRING_H
 #define MY_STRING_H
 
 #include <stdio.h>
@@ -13,7 +13,7 @@ typedef struct string String;
 
 typedef void* MY_STRING;
 
-enum Status{FAILURE, SUCCESS};
+enum Status{FAILURE, SUCCESS} Status;
 // Precondition: None 
 // Postcondition: Allocate space for a string object that represents an empty 
 // string. The string will have capacity 7 and the size 0 by default. A copy of 
