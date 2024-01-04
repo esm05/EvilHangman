@@ -103,5 +103,13 @@ Status my_string_extraction(MY_STRING hMy_string, FILE *fp){
 	return FAILURE;
 }
 Status my_string_insertion(MY_STRING hMy_string, FILE *fp){
-	return FAILURE;
+	String* my_string = (String*) hMy_string;
+	for(int i = 0; i < my_string->capacity; i++){
+		fprintf(fp, "%c", my_string->data[i]);
+		
+	}
+	if(my_string == NULL){
+		return FAILURE;
+	}
+	else return SUCCESS;
 }
