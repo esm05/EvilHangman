@@ -14,6 +14,7 @@ typedef struct string String;
 typedef void* MY_STRING;
 
 enum Status{FAILURE, SUCCESS};
+typedef enum Status Status;
 // Precondition: None 
 // Postcondition: Allocate space for a string object that represents an empty 
 // string. The string will have capacity 7 and the size 0 by default. A copy of 
