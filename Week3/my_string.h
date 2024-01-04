@@ -12,6 +12,8 @@ struct string {
 typedef struct string String;
 
 typedef void* MY_STRING;
+
+enum Status{FAILURE, SUCCESS};
 // Precondition: None 
 // Postcondition: Allocate space for a string object that represents an empty 
 // string. The string will have capacity 7 and the size 0 by default. A copy of 
@@ -54,5 +56,26 @@ int my_string_get_size(MY_STRING hMy_string);
 // if the string represented by hLeft_string is bigger than hRight_string.
 int my_string_compare(MY_STRING hLeft_string, MY_STRING hRight_string);
 
+//Precondition: hMy_string is the handle to a valid My_string object.
+//Postcondition: HMy_string will be the handle of a string object that contains
+// the next string from the file stream fp according to the following rules.
+// 1) Leading whitespace will be ignored.
+// 2) All characters (After the first non-whitespace character is obtained 
+// and included) will be added to the string until a stopping condition is 
+// met. The capacity of the string will continue to grow as needed until all 
+// characters are stored.
+// 3) A stopping condition is met if we reaqd a whitespace character or if we reach EOF
+// Function will return SUCCESS if a non-empty string is read successfully and failure otherwise.
+// Remember that the incoming string may already 
+// contain some data and this function should replace the data but not
+// necessarily resize the array unless needed.
+Status my_string_extraction(MY_STRING hMy_string, FILE* fp);
+
+//Precondition: hMy_string is the handle to a valid My_string object.
+//Post condition: Writes the characters contained in the string object indicated
+// by the hMy_string to the file stream fp.
+// Function will return SUCCESS if it successfully writes the string and 
+// FAILURE otherwise.
+Status my_string_insertion(MY_STRING hMy_string, FILE *fp); 
 #endif // !MY_STRING_H
 
