@@ -98,3 +98,10 @@ int my_string_compare(MY_STRING hLeft_string, MY_STRING hRight_string)
 		
 	return result;
 }
+
+Status my_string_extraction(MY_STRING hMy_string, FILE *fp){
+	return FAILURE;
+}
+Status my_string_insertion(MY_STRING hMy_string, FILE *fp){
+	return FAILURE;
+}
